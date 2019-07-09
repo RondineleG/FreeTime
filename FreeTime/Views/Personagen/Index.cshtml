@@ -1,0 +1,24 @@
+﻿@model IEnumerable<FreeTime.Models.Personagen>
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="container">
+    <h1 class="text-center">Personagens</h1>
+    <p><a asp-action="Create">Novo Personagen</a></p>
+    <div class="row1">
+        @foreach (var item in Model)
+        {
+            <div class="item well">
+                <p><img src="@Html.DisplayFor(modelItem => item.ImageUrl)" width="250" height="170" /></p>
+                <p>@Html.DisplayFor(modelItem => item.Nome)</p>
+                <p>@Html.DisplayFor(modelItem => item.Criador) - @Html.DisplayFor(modelItem => item.Ano)</p>
+                <p> @Html.DisplayFor(modelItem => item.Descricao)</p>
+                <p>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                </p>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,36 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: url(http://subtlepatterns.com/patterns/scribble_light.png);
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.row1 {
+    -moz-column-width: 19em;
+    -webkit-column-width: 19em;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+}
+
+.item {
+    display: inline-block;
+    width: 100%;
+}
+
+.well{background-color:white;}
+
+@media screen and (max-width: 767px) {
+    .carousel-caption {
+        display: none;
+    }
+}
