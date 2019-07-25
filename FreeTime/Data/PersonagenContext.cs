@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FreeTime.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace FreeTime.Models
+namespace FreeTime.Data
 {
     public class PersonagenContext: DbContext
     {
