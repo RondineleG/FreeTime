@@ -46,7 +46,7 @@ namespace FreeTime
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Person}/{action=Index}/{id?}");
+                    template: "{controller=Personagen}/{action=Index}/{id?}");
             });
         }
     }
