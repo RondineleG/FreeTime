@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Novo Personagen";
+   
 }
 
 <h2>Criar</h2>
@@ -31,10 +32,10 @@
                 <label asp-for="ImageUrl" class="control-label"></label>
                 <input asp-for="ImageUrl" class="form-control" />
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
-            </div>            
+            </div>
             <div class="form-group">
                 <label asp-for="Descricao" class="control-label"></label>
-                <textarea asp-for="Descricao"rows="5" cols="40" id="Descricao" name="Descricao" aria-invalid="false"
+                <textarea asp-for="Descricao" rows="5" cols="40" id="Descricao" name="Descricao" aria-invalid="false"
                           class="form-control" style="margin: 0px; width: 722px; height: 68px;">dddd</textarea>
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
