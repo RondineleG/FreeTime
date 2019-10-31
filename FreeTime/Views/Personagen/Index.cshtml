@@ -6,20 +6,33 @@
     <h1 class="text-center">?Not Found</h1>
     <p><a asp-action="Create">Novo Personagen</a></p>
 
-    <div class="row1">
-        @foreach (var item in Model)
-        {
-            <div class="item well">
-                <p><img src="@Html.DisplayFor(modelItem => item.ImageUrl)" width="250" height="170" /></p>
-                <p>@Html.DisplayFor(modelItem => item.Nome)</p>
-                <p>@Html.DisplayFor(modelItem => item.Criador) - @Html.DisplayFor(modelItem => item.Ano)</p>
-                <p> @Html.DisplayFor(modelItem => item.Descricao)</p>
-                <p>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
-                </p>
-            </div>
-        }
-    </div>
+<div class="text-center">
+    <div id="subscriber-list-component">
+        <v-container fluid>
+             <v-row justify="space-around">
+                 <v-col cols="2">
+                     @foreach (var item in Model)
+                     {
+                         <div class="item well">
+                             <p><img src="@Html.DisplayFor(modelItem => item.ImageUrl)" width="250" height="170" /></p>
+                             <p>@Html.DisplayFor(modelItem => item.Nome)</p>
+                             <p>@Html.DisplayFor(modelItem => item.Criador) - @Html.DisplayFor(modelItem => item.Ano)</p>
+                             <p> @Html.DisplayFor(modelItem => item.Descricao)</p>
+                             <p>
+                                 <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                                 <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                                 <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                             </p>
+                         </div>
+                     }
+                 </v-col>
+             </v-row>
+        <v-container fluid>
 </div>
+ </div>
+</div>
+@section Scripts{
+    <script src="~/lib/vue/vue.js"></script>
+    <script src="~/lib/vuetify/vuetify.min.js"></script>
+    <script src="~/js/CadastroVue.js"></script>
+}
